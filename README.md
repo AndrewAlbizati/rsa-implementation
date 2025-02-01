@@ -1,6 +1,6 @@
 # RSA Implementation
 
-This project is a simple RSA encryption and decryption tool implemented in Python. It allows users to generate RSA keys, encrypt messages, and decrypt messages using the RSA algorithm.
+This project is a simple [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) encryption and decryption tool implemented in Python. It allows users to generate RSA keys, encrypt messages, and decrypt messages using the RSA algorithm.
 
 ## Features
 
@@ -12,7 +12,7 @@ This project is a simple RSA encryption and decryption tool implemented in Pytho
 
 1. Key Generation:
     - The user provides two prime numbers (`p` and `q`).
-    - The program computes `n = p * q` and `phi_n = (p-1) * (q-1)`.
+    - The program computes `n = p * q` and `phi_n = (p-1) * (q-1)` (see [Euler's totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function)).
     - A random `e` is chosen such that `gcd(e, phi_n) = 1`.
     - The modular inverse `d` of `e` is computed using `pow(e, -1, phi_n)`.
     - The public key consists of `(n, e)`, and the private key consists of `(phi_n, d, p, q)`.
